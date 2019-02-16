@@ -23,7 +23,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="测试我的个人博客">
+        <meta property="og:title" content="一些记录">
     
 
     <!--Open Graph Description-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>测试我的个人博客 - ChenHanBin</title>
+    <title>一些记录 - ChenHanBin</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -149,13 +149,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>测试我的个人博客</h1>
+                    <h1>一些记录</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2018-12-27
+                            2019-02-16
                         
                     </span>
                 </div>
@@ -177,7 +177,9 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>这是一篇测试博客</p>
+                <p># </p>
+<h1 id="JvmOverloads作用"><a href="#JvmOverloads作用" class="headerlink" title="@JvmOverloads作用"></a>@JvmOverloads作用</h1><p>​    在有默认参数值的方法中使用，Kotlin会暴露多个重载方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">fun <span class="title">main</span><span class="params">(args: Array&lt;String&gt;)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> d = Demo()</span><br><span class="line">    d.Play()</span><br><span class="line">    d.Play(<span class="number">1</span>)</span><br><span class="line">    d.Play(<span class="number">1</span>,<span class="string">"2"</span>)</span><br><span class="line">    d.Play(<span class="number">1</span>,<span class="string">"2"</span>, <span class="number">3</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">     <span class="meta">@kotlin</span>.jvm.<span class="function">JvmOverloads fun <span class="title">Play</span><span class="params">(a:Int = <span class="number">1</span>, b:String = <span class="string">"b"</span>, c:Int = <span class="number">0</span>)</span> </span>&#123;</span><br><span class="line">            print(a)</span><br><span class="line">            print(b)</span><br><span class="line">            print(c)</span><br><span class="line">            println()</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">得到结果：</span><br><span class="line">    <span class="number">1</span>b0</span><br><span class="line">    <span class="number">1</span>b0</span><br><span class="line">    <span class="number">120</span></span><br><span class="line">    <span class="number">123</span></span><br></pre></td></tr></table></figure>
 
 
                 
