@@ -23,7 +23,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="categories">
+        <meta property="og:title" content="Vultr搭建ss">
     
 
     <!--Open Graph Description-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>categories - ChenHanBin</title>
+    <title>Vultr搭建ss - ChenHanBin</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -149,11 +149,7 @@
 </nav>
 
     <!-- Main Content -->
-    
-
-
-    <section class="main">
-        <!-- Page Header -->
+    <!-- Page Header -->
 <!-- Set your background image for this header in your post front-matter: cover -->
 
 <header class="intro-header" style="background-image: url('https://p.nanrenwo.net/uploads/allimg/160421/8426-1604211F355.gif')">
@@ -161,13 +157,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>categories</h1>
+                    <h1>Vultr搭建ss</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2018-12-30
+                            2019-02-16
                         
                     </span>
                 </div>
@@ -183,13 +179,39 @@
 
             <!-- Tags and categories -->
            
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/vpn/">#vpn</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
 
             <!-- Gallery -->
             
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                
+                <h1 id="Vultr搭建SS"><a href="#Vultr搭建SS" class="headerlink" title="Vultr搭建SS"></a>Vultr搭建SS</h1><p>​    记录一下在Vultr搭建ss的过程。</p>
+<h2 id="​Vultr"><a href="#​Vultr" class="headerlink" title="​Vultr"></a>​Vultr</h2><p>​    首先需要登陆<a href="https://www.vultr.com" target="_blank" rel="noopener">Vultr</a>注册账号，然后充值用于购买VPS(Virtual Private Servers)。</p>
+<p>​    在vultr内选择server，选择国家、服务器系统和配置、套餐以及价格等。我自己之前创建的是新加坡的服务器，延时在3000ms左右，最近被墙啦，重新搭建了东京的服务器，延时1400ms左右。目前搭建的ss足以满足我的网络需求。<img src="/Users/chenhanbin/Library/Application%20Support/typora-user-images/vultr_country.png" alt="image-20190210011102922"></p>
+<p><img src="/Users/chenhanbin/Library/Application%20Support/typora-user-images/vultr_server.png" alt="image-20190210011102922"></p>
+<p>​    选择好了，直接install就可以了，创建的服务器带有manage选项，点击进入后，会有密码等我们需要的信息。这里最好ping一下服务器的ip，如果被墙，则需要重新创建。ip可能刚分配的时候就被墙，也可能是我们使用了一段时间被墙，这个是人品问题了。</p>
+<h2 id="搭建ss"><a href="#搭建ss" class="headerlink" title="搭建ss"></a>搭建ss</h2><p>​    ssh远程上搭建的vps。vultr提供了终端，但是我个人更加喜欢在自己的终端做。当然也可以选择xShell、Putty等。</p>
+<p>​    <code>ssh root@your IP</code></p>
+<p>​    这里会提示链接的信息，输入yes。</p>
+<p>​    接下来，直接使用github上提供的ss部署脚本（teddysun大神牛逼）即可。</p>
+<p>​    <code>*wget –no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh*</code></p>
+<p>​    如果在这一步出现<strong>bash: wget: command not found</strong>，那么需要执行<strong>yum -y install wget</strong>指令。</p>
+<p>​    接下来就是根据提示，输入密码，加密方式等等，然后等待部署成功，就可以获得ss需要的配置信息，实现fq。</p>
+
 
                 
             </div>
@@ -205,12 +227,6 @@
         </div>
     </div>
 </article>
-    </section>
-
-
-
-
-
 
     <!-- Footer -->
     <hr>
