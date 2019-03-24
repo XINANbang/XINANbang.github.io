@@ -23,7 +23,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="一些记录">
+        <meta property="og:title" content="RxJava">
     
 
     <!--Open Graph Description-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>一些记录 - ChenHanBin</title>
+    <title>RxJava - ChenHanBin</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -149,13 +149,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>一些记录</h1>
+                    <h1>RxJava</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2019-02-16
+                            2019-03-10
                         
                     </span>
                 </div>
@@ -177,15 +177,12 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="Google-Play-iap-Billing缓存"><a href="#Google-Play-iap-Billing缓存" class="headerlink" title="Google Play iap Billing缓存"></a>Google Play iap Billing缓存</h1><p>​    有时候，因为网络不稳定或者一些略政治的问题，导致了我们购买了商品，但是没有正常执行消耗导致无法重复购买，这时候需要清除一下缓存数据，关机重启。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell pm clear com.android.vending</span><br></pre></td></tr></table></figure>
-<h1 id="导出已经安装的应用apk"><a href="#导出已经安装的应用apk" class="headerlink" title="导出已经安装的应用apk"></a>导出已经安装的应用apk</h1><p>1、找到程序的包名 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell pm list packages</span><br></pre></td></tr></table></figure>
-<p>2、找到 apk 的位置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell pm path com.package.tofind</span><br></pre></td></tr></table></figure>
-<p>3、pull到指定目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb pull /data/app/com.tence01.mm-1.apk ~/whereToPull</span><br></pre></td></tr></table></figure>
-
+                <h2 id="RxJava介绍"><a href="#RxJava介绍" class="headerlink" title="RxJava介绍"></a>RxJava介绍</h2><p>​    一个在 Java VM 上使用可观测的序列来组成异步的、基于事件的程序的库。</p>
+<p>​    其优点是链式写法，代码简洁，可读性高。</p>
+<h2 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h2><p>​    观察者模式是常用设计模式之一。a对象对b对象某一些变化高度敏感，需要一经改变就触发时，我们采用观察者模式。最常见的实现就是android中的OnClickListener()。我们通过setOnClickListener将监听传递给按钮，按钮在判断点击后，调用监听的方法。</p>
+<h2 id="RxJava基本使用"><a href="#RxJava基本使用" class="headerlink" title="RxJava基本使用"></a>RxJava基本使用</h2><p>​    github官方： <a href="https://github.com/ReactiveX/RxJava" target="_blank" rel="noopener">https://github.com/ReactiveX/RxJava</a></p>
+<p>​    build.gradle内添加依赖：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation &quot;io.reactivex.rxjava2:rxjava:2.2.7&quot;</span><br></pre></td></tr></table></figure>
 
                 
             </div>
