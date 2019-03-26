@@ -23,7 +23,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Vultr搭建ShadowSock">
+        <meta property="og:title" content="LeetCode刷题">
     
 
     <!--Open Graph Description-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>Vultr搭建ShadowSock - ChenHanBin</title>
+    <title>LeetCode刷题 - ChenHanBin</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -149,13 +149,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Vultr搭建ShadowSock</h1>
+                    <h1>LeetCode刷题</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2019-01-24
+                            2019-03-26
                         
                     </span>
                 </div>
@@ -171,39 +171,19 @@
 
             <!-- Tags and categories -->
            
-                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
-                    
-                        
-
-
-<a href="/tags/VPN/">#VPN</a>
-
-
-                    
-                </div>
-                <div class="col-lg-4 col-md-5 post-categories">
-                    
-                </div>
-            
 
             <!-- Gallery -->
             
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="Vultr搭建SS"><a href="#Vultr搭建SS" class="headerlink" title="Vultr搭建SS"></a>Vultr搭建SS</h1><p>​    记录一下在Vultr搭建ss的过程。</p>
-<h2 id="​Vultr"><a href="#​Vultr" class="headerlink" title="​Vultr"></a>​Vultr</h2><p>​    首先需要登陆<a href="https://www.vultr.com" target="_blank" rel="noopener">Vultr</a>注册账号，然后充值用于购买VPS(Virtual Private Servers)。充值可以使用支付宝和微信。</p>
-<p>​    在vultr内选择server，选择国家、服务器系统和配置、套餐以及价格等。我自己之前创建的是新加坡的服务器，延时在3000ms左右，最近被墙啦，重新搭建了东京的服务器，延时1400ms左右。目前搭建的ss足以满足我的网络需求。<img src="/2019/01/24/Vultr搭建ShadowSock/vultr_country.png" alt="image-20190210011102922"></p>
-<p><img src="/2019/01/24/Vultr搭建ShadowSock/vultr_server.png" alt="image-20190210011102922"></p>
-<p>​    选择好了，直接install就可以了，创建的服务器带有manage选项，点击进入后，会有密码等我们需要的信息。这里最好ping一下服务器的ip，如果被墙，则需要重新创建。ip可能刚分配的时候就被墙，也可能是我们使用了一段时间被墙，这个是人品问题了。</p>
-<h2 id="搭建ss"><a href="#搭建ss" class="headerlink" title="搭建ss"></a>搭建ss</h2><p>​    ssh远程上搭建的vps。vultr提供了终端，但是我个人更加喜欢在自己的终端做。当然也可以选择xShell、Putty等。</p>
-<p>​    <code>ssh root@your IP</code></p>
-<p>​    这里会提示链接的信息，输入yes。</p>
-<p>​    接下来，直接使用github上提供的ss部署脚本（teddysun大神牛逼）即可。</p>
-<p>​    <code>wget –no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</code></p>
-<p>​    如果在这一步出现<strong>bash: wget: command not found</strong>，那么需要执行<strong>yum -y install wget</strong>指令。</p>
-<p>​    接下来就是根据提示，输入密码，加密方式等等，然后等待部署成功，就可以获得ss需要的配置信息，实现fq。</p>
-
+                <h2 id="31-Next-Permutation"><a href="#31-Next-Permutation" class="headerlink" title="31. Next Permutation"></a>31. Next Permutation</h2><p>Implement <strong>next permutation</strong>, which rearranges numbers into the lexicographically next greater permutation of numbers.</p>
+<p>If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).</p>
+<p>The replacement must be <strong>in-place</strong> and use only constant extra memory.</p>
+<p>Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1,2,3` → `1,3,2`</span><br><span class="line">`3,2,1` → `1,2,3`</span><br><span class="line">`1,1,5` → `1,5,1</span><br></pre></td></tr></table></figure>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>​    从后开始往前寻找i，满足nums[i] &lt; nums[i + 1]。没有，则代表是递减队列，是字典许最后一个。找到后，从后往前找j，满足nums[j] &gt; nums[i]。交换nums[i], nums[j]，将 i+1以后的数组递增排序，即为下一个字典序。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">nextPermutation</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> first = nums.length - <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">while</span> (first &gt;= <span class="number">0</span> &amp;&amp; nums[first] &gt;= nums[first + <span class="number">1</span>]) &#123;</span><br><span class="line">            first--;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (first &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            Arrays.sort(nums);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> second = first + <span class="number">1</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = nums.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] &gt; nums[first]) &#123;</span><br><span class="line">                <span class="keyword">int</span> temp = nums[i];</span><br><span class="line">                nums[i] = nums[first];</span><br><span class="line">                nums[first] = temp;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = second; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i+<span class="number">1</span>; j &lt; nums.length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (nums[i] &gt; nums[j]) &#123;</span><br><span class="line">                    <span class="keyword">int</span> temp = nums[i];</span><br><span class="line">                    nums[i] = nums[j];</span><br><span class="line">                    nums[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
                 
             </div>
